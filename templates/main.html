@@ -1,26 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1>Товары</h1>
-        <ul>
-            {% for good in goods %}
-            <li>
-                <h3>ID</h3>
-                {{ good.id }}
-                <h3>Name</h3>
-                {{ good.name }}
-                <h3>Quantity</h3>
-                {{ good.quantity }}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</body>
+<html>
+  <head>
+    <title>Органайзер</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      section {
+        margin: 20px auto;
+        max-width: 600px;
+        padding: 20px;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Органайзер</h1>
+    </header>
+    <section>
+      <h2>Запланированные задачи</h2>
+      <ul>
+        {% for task in tasks %}
+        <li>{{ task }}</li>
+        {% endfor %}
+      </ul>
+       <!-- Форма для добавления задания -->
+      <form action="/app1/add-task/" method="post">
+        <input type="submit" value="Добавить задание">
+      </form>
+    </section>
+  </body>
 </html>
