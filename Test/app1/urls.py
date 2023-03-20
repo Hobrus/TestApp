@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     path('site/', views.site),
-    path('add-task/', views.add_task)
+    path('addtask/', views.addtask),
+    path('removetask/', views.removetask)
 ]

@@ -69,7 +69,7 @@
 </head>
 <body>
 	<h1>Task List</h1>
-	<form method="post">
+	<form method="post" action="http://127.0.0.1:8000/app1/addtask/">
 		{% csrf_token %}
 		<label for="id">ID:</label>
 		<input type="text" id="id" name="id" required>
