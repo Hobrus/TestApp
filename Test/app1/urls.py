@@ -20,5 +20,7 @@ from . import views
 urlpatterns = [
     path('site/', views.site),
     path('addtask/', views.addtask),
-    path('removetask/', views.removetask)
+    path('removetask/', views.removetask),
+    path('login/', views.login),
+    path('registration/', views.registration)
 ]
