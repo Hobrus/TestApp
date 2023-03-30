@@ -58,6 +58,20 @@
             color: #ffffff;
             font-size: 2rem;
         }
+
+        /* Добавленные стили */
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #6a11cb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .register-link:hover {
+            color: #2575fc;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +81,8 @@
         <input name="username"  type="text" placeholder="Имя пользователя">
         <input name="password"  type="password" placeholder="Пароль">
         <button type="submit">Войти</button>
+        <!-- Добавленная ссылка на страницу регистрации -->
+        <a href="{% url 'registration' %}" class="register-link">Регистрация</a>
     </form>
     <script>
         // Здесь можно добавить крутых эффектов, например, с помощью библиотеки GSAP, Three.js или других
